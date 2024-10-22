@@ -85,7 +85,7 @@ const Sektoral = () => {
       setTotalData(totalItems ? parseInt(totalItems, 10) : 0);
     } catch (error) {
       setError("Terjadi kesalahan saat mengambil data.");
-      Swal.fire("Error", "Terjadi kesalahan saat mengambil data", "error");
+      // Swal.fire("Error", "Terjadi kesalahan saat mengambil data", "error");
     } finally {
       setLoading(false);
     }
