@@ -1,0 +1,17 @@
+.footer {
+  background-color: #1a1a1a; /* Warna latar belakang footer */
+  color: #f0f0f0;            /* Warna teks */
+  padding: 20px 0;          /* Ruang atas dan bawah */
+  text-align: center;        /* Pusatkan teks */
+  font-size: 14px;          /* Ukuran font */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+}
+
+.footer p {
+  margin: 0;                /* Menghapus margin default */
+  transition: color 0.3s;   /* Transisi untuk efek hover */
+}
+
+.footer p:hover {
+  color: #f39c12;           /* Warna teks saat hover */
+}
