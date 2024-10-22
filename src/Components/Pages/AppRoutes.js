@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes, Navigate, useNavigate } from 'react-router-dom';
-import Login from './Login';
 import Home from './Home';
+import Login from './Login';
 import Sektoral from './Sektoral';
 import BukuDigital from './BukuDigital';
 import Dataset from './Dataset'; // Impor Dataset
