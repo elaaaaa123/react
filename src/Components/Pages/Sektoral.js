@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import Select from "react-select";
 import "../../styles/sektoral.css";
 
