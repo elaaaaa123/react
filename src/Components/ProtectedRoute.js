@@ -5,7 +5,7 @@ const ProtectedRoute = ({ children }) => { // Mendeklarasikan komponen Protected
   const isAuthenticated = !!localStorage.getItem("token"); // Memeriksa apakah token ada di localStorage
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />; // Mengalihkan ke halaman login jika tidak terautentikasi
+    return <Navigate to="/home" replace />; // Mengalihkan ke halaman login jika tidak terautentikasi
   }
 
   return children; // Menampilkan children jika terautentikasi
