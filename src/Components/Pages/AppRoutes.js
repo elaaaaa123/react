@@ -31,29 +31,30 @@ const AppRoutes = () => {
     return (
         <>
             {/* Tampilkan Navbar di semua halaman kecuali Login */}
-            {isUserAuthenticated && <NavbarMenu onLogout={handleLogout} />}
+            {<NavbarMenu onLogout={handleLogout} />}
 
             <Routes>
                 {/* Rute Login */}
-                <Route path="/login" element={<Login onLogin={handleLogin} />} />
 
                 {/* Rute Autentikasi */}
-                <Route path="/" element={isUserAuthenticated ? <Home onLogout={handleLogout} /> : <Navigate to="/login" />} />
-                <Route path="/sektoral" element={isUserAuthenticated ? <Sektoral /> : <Navigate to="/login" />} />
-                <Route path="/buku-digital" element={isUserAuthenticated ? <BukuDigital /> : <Navigate to="/login" />} />
+                <Route path="/" element={ <Home onLogout={handleLogout} /> } />
+                <Route path="/sektoral" element={ <Sektoral /> } />
+                <Route path="/buku-digital" element={ <BukuDigital /> } />
 
                 {/* Tambahkan rute Dataset */}
-                <Route path="/dataset" element={isUserAuthenticated ? <Dataset /> : <Navigate to="/login" />} />
+                <Route path="/dataset" element={ <Dataset /> } />
+                <Route path="/login" element={<Login onLogin={handleLogin} />} />
+
 
                 {/* Tambahkan rute DetailDataset */}
-                <Route path="/dataset/detail/:id" element={isUserAuthenticated ? <DetailDataset /> : <Navigate to="/login" />} />
+                <Route path="/dataset/detail/:id" element={ <DetailDataset /> } />
 
                 {/* Rute 404 */}
                 <Route path="*" element={<NotFound />} />
             </Routes>
 
             {/* Tampilkan Footer di semua halaman kecuali Login */}
-            {isUserAuthenticated && <Footer />}
+            { <Footer />}
         </>
     );
 };
